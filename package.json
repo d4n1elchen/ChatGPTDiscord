@@ -1,0 +1,19 @@
+{
+  "name": "ChatGPTDiscord",
+  "version": "0.0.1",
+  "main": "index.js",
+  "type": "module",
+  "repository": "https://github.com/d4n1elchen/ChatGPTDiscord",
+  "author": "Daniel Chen <team6612@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chatgpt": "^2.4.2",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "puppeteer": "^19.4.0"
+  },
+  "scripts": {
+    "start": "xvfb-run node .",
+    "serve": "nodemon ."
+  }
+}
