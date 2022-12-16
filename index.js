@@ -45,7 +45,7 @@ function sleep(ms) {
     const query = message.content
       .replace(client.user, "")
       .replace(/^\s+/gm, "");
-    if (query == "reset") {
+    if (query === "reset") {
       api.resetThread();
       await message.react("🔄");
       return;
@@ -54,7 +54,7 @@ function sleep(ms) {
     await message.react("💭");
     try {
       const response = await askChatGPT(query);
-      console.log(`${client.user.username}: ${query}`);
+      console.log(`${client.user.username}: ${response}`);
       await message.reply(response);
     } catch (e) {
       await message.react("💩");
